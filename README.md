@@ -14,6 +14,12 @@
 
 const MemoryCache = require('memory-cache');
 
+const key = 'key';
+
+result = MemoryCacher.get(key);
+
+result === null
+
 let result = await MemoryCacher.getOrSet(key, async () => {
   await delay(100);
   return 10;
