@@ -7,7 +7,7 @@ describe('Test memory cacher', () => {
     const key = 'key';
     let result = MemoryCacher.get(key);
     expect(result).toBeNull();
-    result = await MemoryCacher.getCached(key, async () => {
+    result = await MemoryCacher.getOrSet(key, async () => {
       await delay(100);
       return 10;
     }, 200);

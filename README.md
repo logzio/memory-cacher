@@ -8,16 +8,16 @@
 # memory-cacher
 
 ## Usage
-warper for the memory-cache with one more function: 'getCached'
-that will get from cache if exist or will cached it
-
+  warper for the memory-cache with one a getOrSet
+  that will get the cached value if it exists otherwise will set the return value from the cb
 ```javascript
+
 const MemoryCache = require('memory-cache');
 
-let result = await MemoryCacher.getCached(key, async () => {
-      await delay(100);
-      return 10;
-    }, 200);
+let result = await MemoryCacher.getOrSet(key, async () => {
+  await delay(100);
+  return 10;
+}, 200);
 
 result === 10
 
