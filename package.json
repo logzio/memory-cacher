@@ -1,14 +1,15 @@
 {
   "name": "memory-cacher",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "cache and get asynchronous values",
   "scripts": {
   },
   "main": "src/index.js",
-  "repository": "git@github.com:logzio/memory-",
+  "repository": "git@github.com:logzio/memory-cacher",
   "author": "nir winkler <madvinking@gmail.com>",
   "keywords": [
-    "memory cache"
+    "memory cache",
+    "memory cacher"
   ],
   "license": "BSD-2-Clause",
   "dependencies": {
