@@ -8,7 +8,7 @@
 # memory-cacher
 
 ## Usage
-  warper for the memory-cache with one a getOrSet
+  warper for the memory-cache with one a getCached
   that will get the cached value if it exists otherwise will set the return value from the cb
 ```javascript
 
@@ -20,7 +20,7 @@ result = MemoryCacher.get(key);
 
 result === null
 
-let result = await MemoryCacher.getOrSet(key, async () => {
+let result = await MemoryCacher.getCached(key, async () => {
   await delay(100);
   return 10;
 }, 200);

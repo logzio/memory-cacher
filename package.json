@@ -16,6 +16,7 @@
     "jest": "24.9.0"
   },
   "dependencies": {
-    "memory-cache": "^0.2.0"
+    "memory-cache": "^0.2.0",
+    "node-cache": "^5.1.0"
   }
 }

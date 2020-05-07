@@ -1,4 +1,4 @@
-const { MemoryCacher } = require('../src');
+const NodeCache = require('../src');
 
 const delay = time => new Promise(resolve => setTimeout(resolve, time));
 
