@@ -1,9 +1,8 @@
 {
   "name": "memory-cacher",
-  "version": "1.0.0",
-  "description": "memeory cacher warper with getCached function",
+  "version": "1.0.1",
+  "description": "cache and get asynchronous values",
   "scripts": {
-    "test": "yarn jest"
   },
   "main": "src/index.js",
   "repository": "git@github.com:logzio/memory-",
@@ -12,11 +11,7 @@
     "memory cache"
   ],
   "license": "BSD-2-Clause",
-  "devDependencies": {
-    "jest": "24.9.0"
-  },
   "dependencies": {
-    "memory-cache": "^0.2.0",
-    "node-cache": "^5.1.0"
+    "memory-cache": "^0.2.0"
   }
 }
