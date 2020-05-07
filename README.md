@@ -6,28 +6,31 @@
 
 
 # memory-cacher
-
+get value from cache or from asynchronous getter,
+it will also call the promise only once in case it will ask for the same key more than once
 ## Usage
-  warper for the memory-cache with one a getCached
-  that will get the cached value if it exists otherwise will set the return value from the cb
+
+@param {string} key
+@param {asynchronous function} fn
+@param {int} expiration
 ```javascript
 
-const MemoryCache = require('memory-cache');
+const memoryCacher= require('memory-cacher');
 
 const key = 'key';
 
-result = MemoryCacher.get(key);
+result = memoryCacher.get(key);
 
 result === null
 
-let result = await MemoryCacher.getCached(key, async () => {
+let result = await memoryCacher.getCached(key, async () => {
   await delay(100);
   return 10;
 }, 200);
 
 result === 10
 
-result = MemoryCacher.get(key);
+result = memoryCacher.get(key);
 
 result === 10
 
