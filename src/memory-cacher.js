@@ -1,5 +1,4 @@
 const MemoryCache = require('memory-cache');
-const { isNil } = require('lodash');
 
 class PendingPromiseCache {
   constructor({ log = () => { } } = {}) {
