@@ -30,7 +30,7 @@ let result = await memoryCacher.getCached(key, async () => {
 
 result === 10
 
-result = memoryCacher.get(key);
+result = memoryCacher.getCached(key);
 
 result === 10
 
