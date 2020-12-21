@@ -15,22 +15,22 @@ it will also call the promise only once in case it will ask for the same key mor
 @param {int} expiration
 ```javascript
 
-const memoryCacher= require('memory-cacher');
+const { MemoryCacher } = require('memory-cacher');
 
 const key = 'key';
 
-result = memoryCacher.get(key);
+result = MemoryCacher.getCached(key);
 
 result === null
 
-let result = await memoryCacher.getCached(key, async () => {
+let result = await MemoryCacher.getCached(key, async () => {
   await delay(100);
   return 10;
 }, 200);
 
 result === 10
 
-result = memoryCacher.getCached(key);
+result = MemoryCacher.getCached(key);
 
 result === 10
 
