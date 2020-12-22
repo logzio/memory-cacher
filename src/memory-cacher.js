@@ -22,7 +22,7 @@ class PendingPromiseCache {
 
 const pendingPromises = new PendingPromiseCache();
 
-class MemoryCacher extends MemoryCache {
+class MemoryCacher {
   static async getCached(key, creator, expiration) {
     const existingVal = MemoryCache.get(key);
 
