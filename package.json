@@ -1,6 +1,6 @@
 {
   "name": "memory-cacher",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "cache and get asynchronous values",
   "scripts": {
   },
