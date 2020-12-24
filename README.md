@@ -19,19 +19,19 @@ const { MemoryCacher } = require('memory-cacher');
 
 const key = 'key';
 
-result = MemoryCacher.getCached(key);
+let result = MemoryCacher.getCached(key);
 
-result === null
+// result === null
 
-let result = await MemoryCacher.getCached(key, async () => {
+result = await MemoryCacher.getCached(key, async () => {
   await delay(100);
   return 10;
 }, 200);
 
-result === 10
+// result === 10
 
 result = MemoryCacher.getCached(key);
 
-result === 10
+// result === 10
 
 ```
